@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+
+    <style>
+        body{
+            background: rgb(204, 222, 246);
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendedo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Exemplos</div>
+    <br>
+    
+
+    <script>
+    window.document.write("Título da página: " + window.document.title + "<br>"); // Escreve o título da página
+    window.document.write("Data e hora: " + new Date() + "<br>"); // Escreve a data e hora atual usando o DOM
+    window.document.write("Caminho: " + window.document.location.pathname + "<br>"); // Mostra o caminho do arquivo (parte depois do domínio)
+    
+    var p1 =  window.document.getElementsByTagName('p')[0] //Seleçãp por nome
+    window.document.write("<br>" + "No P selecionado, está escrito assim: " + p1.innerText + "<br>")
+    
+    var p2 = window.document.getElementById('msg') //Seleção por ID
+    window.document.write("No ID selecionado, está escrito: " + p2.innerText + "<br>")
+    
+    var p3 = window.document.querySelector('div#msg') //Seleção por seletor
+    p3.style.background = 'blue' //texto modificado a partir do p3 e select
+    
+</script>
+
+    
+</body>
+</html>
